@@ -55,7 +55,12 @@ const resolvers = {
   }
 }
 
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  introspecton: true,
+  playground: true
+})
 
 server
   .listen({
